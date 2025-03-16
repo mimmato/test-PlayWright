@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="test-playwright">
+    <test name="Homepage Tests">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="browserType" value="chromium"/>
+        <classes>
+            <class name="HomePageTest"/>
+        </classes>
+    </test>
+</suite>
