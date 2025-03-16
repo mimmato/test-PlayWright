@@ -26,6 +26,7 @@ public class HomePage {
     public void enterEmail(String email) {
         emailField.fill(email);
     }
+    // .fill could potentially be clearing the field after page reload
 
     // click the waitlist button
     public void clickJoinWaitlistButton() {
@@ -54,6 +55,11 @@ public class HomePage {
 
         return emails;
     }
+
+    public String getEmailFieldValue() {
+        return emailField.inputValue();
+    }
+
 }
 
 

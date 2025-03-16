@@ -34,8 +34,14 @@ public class HomePageTest extends BrowserSettings {
             homePage.clickJoinWaitlistButton();
             // check for confirmation image
             Assert.assertTrue(homePage.isConfirmationVisible(), "Confirmation message should be visible after clicking the 'Join Waitlist' button for email: " + email);
-            // reload page to continue with the iterations
+            // reload hard refreshes the page and inputted values are cleared, this is not expected when testing manually
             getPage().reload();
+
+            // Assert that the input field is empty after reload
+            String currentValue = homePage.getEmailFieldValue();
+            Assert.assertFalse(currentValue.isEmpty(), "Email field should NOT be empty on this check, value found is: " + currentValue);
+//            Assert.assertTrue(currentValue.isEmpty(), "Email input field should be empty after reload, but found: " + currentValue);
+
         }
     }
 
