@@ -19,8 +19,8 @@ public class BrowserSettings {
 
         this.page = context.newPage(); // Create a Playwright Page instance
 
-        homePage = new HomePage(page); // Pass the page to HomePage
-        page.navigate("https://www.fairlight.app/");
+        this.homePage = new HomePage(page); // Pass the page to HomePage
+        this.page.navigate("https://www.fairlight.app/");
     }
 
     @AfterSuite
@@ -34,7 +34,7 @@ public class BrowserSettings {
     }
 
     public Page getPage() { // Method to access Page instance in other classes
-        return page;
+        return this.page;
     }
 }
 

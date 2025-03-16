@@ -41,7 +41,6 @@ public class HomePageTest extends BrowserSettings {
             String currentValue = homePage.getEmailFieldValue();
             Assert.assertFalse(currentValue.isEmpty(), "Email field should NOT be empty on this check, value found is: " + currentValue);
 //            Assert.assertTrue(currentValue.isEmpty(), "Email input field should be empty after reload, but found: " + currentValue);
-
         }
     }
 
